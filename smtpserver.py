@@ -11,7 +11,7 @@ import sys, getopt
 from smtpd import SMTPServer
 from datetime import datetime
 
-path = os.getcwd() + "/messages"
+path = os.getcwd() + "/messsages"
 
 
 class SmtpServer(SMTPServer):
@@ -51,5 +51,5 @@ if __name__ == "__main__":
    try:
     commands[" ".join(sys.argv[1:])]()
    except KeyError:
-     print "Usage: --start or --stop(Usage Ctrl-C for stop service).More information please use --help. Statistics usage -stat" 
+     print "Usage: --start or --stop(Usage Ctrl-C for stop service). For More information please use --help. For Statistics usage --stat" 
       

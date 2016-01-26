@@ -1,6 +1,6 @@
 #! /usr/bin/python
 # -*- encoding: utf-8 -*-
- 
+# Vasko Cuturuilo
 import os
 import signal 
 import asyncore

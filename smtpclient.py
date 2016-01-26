@@ -1,3 +1,6 @@
+#! /usr/bin/python
+# -*- encoding: utf-8 -*-
+# Vasko Cuturuilo
 import smtplib
 import socket
 import time

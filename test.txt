@@ -36,3 +36,5 @@
         то поле FROM письма может принять формы qwe@from.example.com, asd@from.example.com, xxx@from.example.com, 
         но не zxc@someotherdomain.com
 
+
+Whats All

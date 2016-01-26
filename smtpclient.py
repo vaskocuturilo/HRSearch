@@ -41,5 +41,5 @@ if __name__ == "__main__":
    try:
       commands[" ".join(sys.argv[1:])]()
    except KeyError:
-     print "Usage: --start for start service."
+     print "Usage: --start for start service. Or --help for Help."
       

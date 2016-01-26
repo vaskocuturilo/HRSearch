@@ -40,16 +40,16 @@ def static():
    for f in files:
        print os.path.join(root,f)
 def help():
-  print "The SMTP server version 1.0.0.0"
+  print "The SMTP server version 1.0"
 commands = {
-    "-start":run,
-    "-stop" :stop,
-    "-stat" :static,
-    "-help" :help
+    "--start":run,
+    "--stop" :stop,
+    "--stat" :static,
+    "--help" :help
 }
 if __name__ == "__main__":
    try:
     commands[" ".join(sys.argv[1:])]()
    except KeyError:
-     print "Usage: -start or -stop(Usage Ctrl-C for stop service).More information please use -help. Statistics usage -stat" 
+     print "Usage: --start or --stop(Usage Ctrl-C for stop service).More information please use --help. Statistics usage -stat" 
       

@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # -*- encoding: utf-8 -*-
 # Vasko Cuturuilo
+
 import os
 import signal 
 import asyncore
@@ -12,7 +13,9 @@ from smtpd import SMTPServer
 from datetime import datetime
 
 path = os.getcwd() + "/messsages"
-
+from ConfigParser import SafeConfigParser
+parser = SafeConfigParser()
+parser.read('config.ini')
 
 class SmtpServer(SMTPServer):
 
@@ -27,8 +30,8 @@ class SmtpServer(SMTPServer):
 def run():
     if not os.path.exists(path):
         os.mkdir(path)
-    SmtpServer(("localhost", 25), None)
-    print "SMTP server is runing ..... "
+    SmtpServer(((parser.get('smtpserver','host')), int(parser.get('smtpserver','port'))), None)
+    print "Smtp server is runing ....."
     try:
         asyncore.loop()
     except KeyboardInterrupt:
@@ -40,7 +43,7 @@ def static():
    for f in files:
        print os.path.join(root,f)
 def help():
-  print "The SMTP server version 1.0"
+  print "Smtp server version 1.0"
 commands = {
     "--start":run,
     "--stop" :stop,

@@ -9,8 +9,8 @@ import string
 import random
 import sys, getopt
 from datetime import datetime
-fromaddres = sys.argv[1]
-toaddreses = sys.argv[2]
+fromaddres = sys.argv[1:2]
+toaddreses = sys.argv[2:3]
 def prompt(prompt):
     return raw_input(prompt).strip()
 def from_generator(size=3, chars=string.ascii_lowercase):
@@ -42,8 +42,7 @@ commands = {
     "--help" :help
 }
 if __name__ == "__main__":
- #  try:
-  #    commands[" ".join(sys.argv[3:])]()
-  # except KeyError:
-  #   print "Usage: --start for start service. Or --help for Help."
-  run()
+   try:
+      commands[" ".join(sys.argv[3:])]()
+   except KeyError:
+     print "Usage: --start for start service. Or --help for Help."

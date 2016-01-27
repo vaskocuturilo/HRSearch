@@ -1,5 +1,5 @@
 # HRSearch
-SmtpServer and SmtpClient. 
+Smtp Server and Smtp Client. 
 
 
 Smtp Server 
@@ -14,7 +14,18 @@ For start Smtp Server Usage :
 Smtp Client 
 =================================================================================================================================
 For start Smtp client Usage: 
- - python smtpclient --start 
+ - python smtpclient From To --start 
  For help Usage: 
-   python smtpclient --help
+   python smtpclient From To --help
 
+From - domain from email 
+To -   domain to email
+Example: python smtpclient.py from.rambler.ru to.google.ru --start 
+=================================================================================================================================
+
+Config.ini
+===============================================================================================================================
+Configuration File
+[smtpserver] - address smtp server
+[port] - port for the smtp server
+[smtp client] - address smtp server for client 
